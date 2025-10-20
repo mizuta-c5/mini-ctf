@@ -1,7 +1,7 @@
 5問CTF (Linux/PowerShell) 
 ==============================================
 使用可能なコマンド(オプションは全て使用可): 
-cat, cd, pwd, ls, find, ls, tree, touch/type nul>, sort, diff, open
+cat, cd, pwd, ls, find, ls, tree, touch/type nul>, sort
 
 最終目標：各フォルダに隠れたフラグ (例 ctf{...}) を, 集める.
 
