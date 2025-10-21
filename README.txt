@@ -35,9 +35,25 @@ find . -name {ファイル名}
 cat $(find) で findコマンドを入力した結果を出力します.
 cat | sort のように"|"で繋ぐことで, catの出力をsortすることができます.
 
+
+
 [[トラブルシューティング]]
+
 Q. オプションとは?
-A. find -n hoge のように "-"から始まる部分
+A. -（Windowsの tree は /）から始まる指定。例：ls -Force、tree /F
+
 Q. コマンドとオプションの説明は?
-A. man hoge のように man の後にコマンドを入れると説明が現れる. 画面を抜けるには q を押す.
+A.
+
+Linux: man ls / ls --help
+
+PowerShell: Get-Help ls / ls -? / command --help
+
+Q. Windowsで find . -name ... が動かない
+A. find は テキスト検索用（find.exe）のため。代わりに
+ls -Recurse -Filter 'file' または
+ls -Recurse | Where-Object Name -like 'pattern'
+
+Q. ls -la がPowerShellで通らない
+A. PSは短縮オプション連結が不可。ls -Force（隠し表示）, ls -Recurse（再帰）など明示で。
  
